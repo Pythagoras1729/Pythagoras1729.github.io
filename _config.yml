@@ -1,0 +1,33 @@
+# _config.yml
+title: Stream of Thoughts
+description: An anonymous blog
+baseurl: "" # Update this if your site is not at root of domain
+url: "" # Update this with your GitHub Pages URL
+markdown: kramdown
+permalink: /:title/
+
+collections:
+  stream:
+    output: true
+    permalink: /stream/:title/
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "stream"
+    values:
+      layout: "stream"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock

@@ -1,0 +1,9 @@
+---
+layout: default
+---
+<article class="stream-entry">
+    <time datetime="{{ page.date | date_to_xmlschema }}">
+        {{ page.date | date: "%B %d, %Y %H:%M" }}
+    </time>
+    {{ content }}
+</article>
