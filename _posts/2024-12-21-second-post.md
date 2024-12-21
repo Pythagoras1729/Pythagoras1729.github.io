@@ -1,11 +1,10 @@
 ---
 layout: post
-title: "My First Post"
-date: 2024-12-21
+title: "My Second Post"
+date: 2024-12-20
 ---
 
-This is my first blog post.
-
+This is my first blog post. 
 
 Markdown formatting works here, so I can:
 - Make lists

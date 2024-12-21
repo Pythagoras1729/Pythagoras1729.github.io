@@ -26,10 +26,6 @@ nav a {
     text-decoration: none;
 }
 
-nav a:hover {
-    text-decoration: underline;
-}
-
 .post, .stream-entry {
     background: white;
     padding: 1.5rem;
@@ -58,4 +54,58 @@ time {
     display: inline-block;
     width: 100px;
     color: var(--meta-color);
+}
+
+
+/* General link styling */
+a {
+    color: #2c5282;  /* A nice blue color */
+    text-decoration: none;
+    position: relative;
+    transition: color 0.2s ease;
+}
+
+/* Subtle underline animation on hover */
+a:hover {
+    color: #1a365d;  /* Darker blue on hover */
+}
+
+a:after {  /* Exclude navigation links if you want */
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background-color: currentColor;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+a:hover:after {
+    transform: scaleX(1);
+}
+
+/* Navigation link styling */
+nav a {
+    font-weight: 500;
+    /* padding: 0.5rem 1rem;
+    border-radius: 4px; */
+}
+
+/* nav a:hover {
+    background-color: rgba(44, 82, 130, 0.1);  /* Subtle background on hover */
+/* } */
+
+/* Archive page link styling */
+.posts-by-year a {
+    font-weight: 500;
+    padding: 0.2rem 0;
+}
+
+/* Post title links */
+.post-preview a {
+    color: #314a74;  /* Darker color for post titles */
+    font-weight: 600;
+    font-size: 1.25rem;
 }
